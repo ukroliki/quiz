@@ -40,7 +40,6 @@ namespace quiz
         }
         public static int Game(int Number)
         {
-            Console.Clear();
             Console.WriteLine(Name + "\t" + "Вопрос" + (queezNum + 1) + " : " + Score);
             if (queezNum >= 20)
             {
@@ -107,6 +106,7 @@ namespace quiz
             Start();
             while (state != 8 && state != 4)
             {
+                Console.Clear();
                 state = Game(queezNum);
                 if (state == 0)
                 {

@@ -1,0 +1,4 @@
+environment:
+  my_variable:
+    secure: VNdURIVIqrNzxL3EJO488g==
+    template: "{{#passed}}:{{#passed}}:white_check_mark:{{/passed}}{{#failed}}:x:{{/failed}} [Build {{&projectName}} {{buildVersion}} {{status}}]({{buildUrl}}) (commit {{commitUrl}} by @{{&commitAuthorUsername}})"

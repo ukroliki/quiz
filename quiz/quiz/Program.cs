@@ -101,9 +101,14 @@ namespace quiz
         }
         static void Main(string[] args)
         {
-            Input();
-            Start();
             int state = 0;
+            state=Input();
+            if(state!=0)
+            {
+                Console.ReadKey();
+                Environment.Exit(1);
+            }
+            Start();
             while (state != 8)
             {
                 state = Game(queezNum);

@@ -32,6 +32,15 @@ namespace quiz
             }
             return 0;
         }
+        static void GetQuestion(int Number)
+        {
+            quest = File.ReadAllLines(@".\quest\" + Number + ".txt");
+            Console.WriteLine(quest[0]);
+            Console.WriteLine(quest[1]);
+            Console.WriteLine(quest[2]);
+            Console.WriteLine(quest[3]);
+            Console.WriteLine(quest[4]);
+        }
         static void Main(string[] args)
         {
         }

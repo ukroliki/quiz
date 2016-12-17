@@ -41,6 +41,16 @@ namespace quiz
             Console.WriteLine(quest[3]);
             Console.WriteLine(quest[4]);
         }
+        static void GameOver()
+        {
+            Console.Clear();
+            if (queezNum == 20)
+                Console.WriteLine("Поздравляем, вы победили!!! Ваш счет: {0}", Score);
+            else
+                Console.WriteLine("Вы завершили игру со счетом: {0}", Score);
+            Console.ReadKey();
+            Environment.Exit(0);
+        }
         static void Start()
         {
             Console.Write("Добро пожаловать!\nВведите ваше имя: ");

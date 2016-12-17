@@ -1,0 +1,9 @@
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\bin\Debug\quiz.exe
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\bin\Debug\quiz.pdb
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Екатерина\Desktop\quiz\quiz\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

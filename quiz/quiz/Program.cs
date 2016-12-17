@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace quiz
 {
-    class Program
+    public class Program
     {
         static Random rand = new Random();
         static string Name = "";
         static int Score = 0;
-        static int queezNum = 0;
+        public static int queezNum = 0;
         static string[] quest;
         public static int Input()
         {
@@ -42,7 +38,7 @@ namespace quiz
             Console.WriteLine(quest[3]);
             Console.WriteLine(quest[4]);
         }
-        static int Game(int Number)
+        public static int Game(int Number)
         {
             Console.Clear();
             Console.WriteLine(Name + "\t" + "Вопрос" + (queezNum + 1) + " : " + Score);
@@ -75,7 +71,7 @@ namespace quiz
                         Console.WriteLine("Неправильно! Игра завершена!");
                         Thread.Sleep(1000);
                         Console.ForegroundColor = ConsoleColor.White;
-                        return 8;
+                        return 4;
                     }
                 default:
                     Console.WriteLine("Недопустимый вариант ответа!");
@@ -109,7 +105,7 @@ namespace quiz
                 Environment.Exit(1);
             }
             Start();
-            while (state != 8)
+            while (state != 8 && state != 4)
             {
                 state = Game(queezNum);
                 if (state == 0)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace quiz
@@ -41,6 +42,47 @@ namespace quiz
             Console.WriteLine(quest[3]);
             Console.WriteLine(quest[4]);
         }
+        static int Game(int Number)
+        {
+            Console.Clear();
+            Console.WriteLine(Name + "\t" + "Вопрос" + (queezNum + 1) + " : " + Score);
+            if (queezNum >= 20)
+            {
+                return 8;
+            }
+            else
+                GetQuestion(Number);
+            Console.Write("Ваш ответ: ");
+            string answer = Console.ReadLine();
+            switch (answer)
+            {
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                    if (answer == quest[5])
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Правильно!");
+                        Thread.Sleep(1000);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Score += (queezNum + 1) * 100;
+                        return 0;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Неправильно! Игра завершена!");
+                        Thread.Sleep(1000);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        return 8;
+                    }
+                default:
+                    Console.WriteLine("Недопустимый вариант ответа!");
+                    Thread.Sleep(1000);
+                    return 6;
+            }
+        }
         static void GameOver()
         {
             Console.Clear();
@@ -61,6 +103,18 @@ namespace quiz
         {
             Input();
             Start();
+            int state = 0;
+            while (state != 8)
+            {
+                state = Game(queezNum);
+                if (state == 0)
+                {
+                    queezNum++;
+                    continue;
+                }
+            }
+            GameOver();
+            Console.ReadKey();
         }
 
     }

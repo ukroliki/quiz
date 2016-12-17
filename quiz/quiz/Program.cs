@@ -41,8 +41,18 @@ namespace quiz
             Console.WriteLine(quest[3]);
             Console.WriteLine(quest[4]);
         }
+        static void Start()
+        {
+            Console.Write("Добро пожаловать!\nВведите ваше имя: ");
+            Name = Console.ReadLine();
+            Console.Clear();
+        }
         static void Main(string[] args)
         {
+            Input();
+            Start();
         }
+
     }
+    
 }
